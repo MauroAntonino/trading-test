@@ -31,7 +31,7 @@ MIDDLEWARE: list = [
 
 CORS_ALLOW_ALL_ORIGINS: bool = True
 
-ROOT_URLCONF: str= 'app.urls'
+ROOT_URLCONF: str= 'app.service.urls'
 
 TEMPLATES: list = [
   {
@@ -49,7 +49,7 @@ TEMPLATES: list = [
   },
 ]
 
-WSGI_APPLICATION: str = 'app.wsgi.application'
+WSGI_APPLICATION: str = 'app.service.wsgi.application'
 
 # DATABASES: dict = {
 #   'default': {
