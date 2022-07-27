@@ -4,7 +4,7 @@ import requests
 from jsonschema import validate
 import redis
 import pickle
-from app.domain.entity.token import Provider
+# from app.domain.entity.token import Provider
 
 def validate_response(data):
     schema = { 
