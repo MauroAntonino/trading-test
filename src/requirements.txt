@@ -1,4 +1,5 @@
 Inject==4.3.1
+django-cors-headers==3.7.0
 Jinja2==2.11.2
 MarkupSafe==1.1.1
 testresources==2.0.1

@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 BASE_DIR: Path = Path(__file__).resolve().parent.parent
 
@@ -36,7 +37,7 @@ ROOT_URLCONF: str= 'app.service.urls'
 TEMPLATES: list = [
   {
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [],
+    'DIRS': [os.path.join(BASE_DIR, 'templates')],
     'APP_DIRS': True,
     'OPTIONS': {
       'context_processors': [
