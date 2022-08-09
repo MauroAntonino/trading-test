@@ -11,10 +11,13 @@ class TradingOperations:
         self.secret = "eneyxege75yezko"
         self.url_indicator = "https://api.tradingeconomics.com/historical/country/{country}/indicator/{indicator}/?client={KEY}:{SECRET}"
         self.all_countries = "https://api.tradingeconomics.com/country/mexico?client={KEY}:{SECRET}"
+        self.proxyDict = {
+            "api.tradingeconomics.com"
+        }
     
     def get_full_indicator_data(self, indicator, conutry):
         url = self.url_indicator.format(country=conutry.value, indicator=indicator, KEY=self.key , SECRET=self.secret)
-        response_data = get(url).json()
+        response_data = get(url, proxies=self.proxyDict).json()
         response_data = response_data[:len(response_data) - 1]
         data :Data  = Data(label=[], value=[])
         append_label = data.label.append
@@ -28,7 +31,7 @@ class TradingOperations:
     
     def get_partial_indicator_data(self, indicator, conutry):
         url = self.url_indicator.format(country=conutry.value, indicator=indicator, KEY=self.key , SECRET=self.secret)
-        response_data = get(url).json() 
+        response_data = get(url, proxies=self.proxyDict).json() 
         response_data = response_data[:len(response_data) - 1]
         data :Data  = Data(label=[], value=[])
         append_label = data.label.append
