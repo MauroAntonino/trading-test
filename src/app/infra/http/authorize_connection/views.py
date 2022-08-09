@@ -1,5 +1,6 @@
 # Create your views here.
 from django.views import View
+from django.http import JsonResponse
 from django.shortcuts import redirect, render
 from app.infra.trading_api.trading_api import TradingOperations
 from app.domain.entity.countries import Conutry
