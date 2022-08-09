@@ -1,9 +1,7 @@
 import os
 import sys
-from app import create_app
 
 def main():
-  create_app()
   os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'app.service.settings')
   try:
     from django.core.management import execute_from_command_line
