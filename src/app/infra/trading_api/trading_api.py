@@ -12,7 +12,7 @@ class TradingOperations:
         self.url_indicator = "https://api.tradingeconomics.com/historical/country/{country}/indicator/{indicator}/?client={KEY}:{SECRET}"
         self.all_countries = "https://api.tradingeconomics.com/country/mexico?client={KEY}:{SECRET}"
         self.proxyDict = {
-            "api.tradingeconomics.com"
+            "http": "api.tradingeconomics.com"
         }
     
     def get_full_indicator_data(self, indicator, conutry):
